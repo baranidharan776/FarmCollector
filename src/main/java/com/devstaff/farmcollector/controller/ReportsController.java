@@ -50,5 +50,6 @@ public class ReportsController {
     public ResponseEntity<List<ReportResponseDTO>> fetchReportByRequest(@Valid @RequestBody ReportRequestDTO request){
         return reportService.fetchReportByRequest(request);
     }
+    
 
 }
