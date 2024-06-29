@@ -26,6 +26,17 @@ your preferred browser.for api docs
 ```sh
 http://localhost:8080/swagger-ui/index.html
 ```
+# Please add Planted and Harvested Crop before hitting Reports.
+You can view reports by 
+```sh
+http://localhost:8080/index.html
+```
+# Future Enhancements
+1) Dedicated UI for CRUD operations
+2) Test coverage - SONAR Integeration
+3) Improvements in ERROR handling
+4) If possible we can merge Planted and Harvested entities into a single one and get faster reports
+
 
 ## License
 
