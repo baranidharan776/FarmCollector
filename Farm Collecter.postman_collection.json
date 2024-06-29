@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "21e5e15f-f01a-46b5-a647-ecd3e130ab7b",
+		"name": "Farm Collecter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2840809"
+	},
+	"item": [
+		{
+			"name": "Save Harvested Crop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"farmId\": 1,\r\n    \"cropId\": 1,\r\n    \"season\": 1,\r\n    \"actualProductAmount\": \"200.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/harvested",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"harvested"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Planted Crop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"farmId\": 1,\r\n    \"farmName\": \"Test\",\r\n    \"cropId\": 1,\r\n    \"cropType\": \"Potato\",\r\n    \"season\": 1,\r\n    \"seasonName\": \"SPRING\",\r\n    \"plantingArea\": 20.0,\r\n    \"expectedProductAmount\": 1500.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/planted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"planted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"farmId\": 1,\r\n    \"cropId\": 1,\r\n    \"season\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

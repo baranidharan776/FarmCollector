@@ -12,7 +12,7 @@ import com.devstaff.farmcollector.dao.entity.Planted;
 @Repository
 public interface PlantedRepository extends JpaRepository<Planted, Long> {
 	
-		@Query("select p from Planted p where p.farm = :farm and p.crop = :crop and p.season = :season")
+		@Query("select p from Planted p where p.farm.id = :farm and p.crop.id = :crop and p.season.id = :season")
 		List<Planted> fecthPlantedCropsByParam(@Param("farm")Long farmId, @Param("crop")Long cropId, @Param("season")Long season);
 
 }

@@ -12,6 +12,6 @@ import com.devstaff.farmcollector.dao.entity.Harvested;
 @Repository
 public interface HarvestedRepository extends JpaRepository<Harvested, Long> {
 
-	@Query("select h from Harvested h where h.farm = :farm and h.crop = :crop and h.season = :season")
+	@Query("select h from Harvested h where h.farm.id = :farm and h.crop.id = :crop and h.season.id = :season")
 	List<Harvested> fecthHarvestedCropsByParam(@Param("farm")Long farmId, @Param("crop")Long cropId, @Param("season")Long season);
 }
